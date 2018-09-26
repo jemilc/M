@@ -78,3 +78,50 @@ f(0)
 > 42
 f(1)
 > 43
+
+Code
+-----
+# run everything when calling script from CLI
+if __name__ == "__main__":
+	main()
+np.mean(np.abs(pred-obs))
+np.arange(0.01,0.99,0.01)
+apply(lambda x: 1 if x else 0))
+
+Modules
+---
+### Panda ### 
+Series
+-------
+pandas.Series(data=None, index=None, dtype=None, name=None, copy=False, fastpath=False)
+apply(func[, convert_dtype, args])	Invoke function on values of Series.
+Ex: pandas.Series(pred > cutoff).apply(lambda x: 1 if x else 0)
+
+### SKLearn ###
+Metrics
+--------
+sklearn.metrics.f1_score(y_true, y_pred, labels=None, pos_label=1, average=’binary’, sample_weight=None)
+F1 = 2 * (precision * recall) / (precision + recall)
+Ex:
+>>> from sklearn.metrics import f1_score
+>>> y_true = [0, 1, 2, 0, 1, 2]
+>>> y_pred = [0, 2, 1, 0, 0, 1]
+>>> f1_score(y_true, y_pred, average='macro')  
+0.26...
+>>> f1_score(y_true, y_pred, average='micro')  
+0.33...
+>>> f1_score(y_true, y_pred, average='weighted')  
+0.26...
+>>> f1_score(y_true, y_pred, average=None)
+array([0.8, 0. , 0. ])
+
+Ex: f1_score(obs,pd.Series(pred > cutoff).apply(lambda x: 1 if x else 0)) #puede ser reemplazado por 1??
+
+
+
+
+
+
+
+
+
